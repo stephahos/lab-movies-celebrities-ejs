@@ -1,0 +1,14 @@
+<h2>Movies</h2>
+<a href="/movies/new">Add a movie</a>
+
+<% movies.forEach(movie => { %>
+<div style="border: 1px solid black; margin-bottom: 1rem; padding: 0 20px 20px">
+        <h4><%= movie.title %></h4>
+        <h4><%= movie.genre %></h4>
+        <h4><%= movie.pilot %></h4>
+        <h4><%= movie.cast %></h4>
+  <a href="/movies/<%- movie._id %>">Details</a>
+  <a href="/movies/update/<%- movie._id %>">Update</a>
+  <a href="/movies/delete/<%- movie._id %>">Delete</a>
+</div>
+<% }) %>

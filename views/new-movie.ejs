@@ -1,0 +1,8 @@
+<h2> Create a New Movie </h2>
+<form method="POST" action="<%- movie.id ? `/movies/create/${movie.id}` : '/movies' %>">
+    <input type="text" placeholder="Movie title" name="title" value="<%- movie.title %>" />
+    <input type="text" placeholder="genre" name="genre" value="<%- movie.genre %>" />
+    <input type="text" placeholder="pilot" name="pilot" value="<%- movie.pilot %>" />
+    <input type="text" placeholder="cast" name="cast" value="<%- movie.cast.join(' ') %>" />
+    <button type="submit">Send</button>
+  </form>
